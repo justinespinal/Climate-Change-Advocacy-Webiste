@@ -1,0 +1,170 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+
+body{
+  background-color: #063084;
+  text-align:center;
+  color:white;
+}
+
+.text-split{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-item:nth-of-type(1){
+  width: 40%;
+}
+.header-item:nth-of-type(2){
+  
+}
+#text{
+  background-color: #4a7ee5;
+  font-style: italic;
+  text-align: center;
+}
+.list-container{
+  text-align:center;
+  margin: 1px;
+}
+#list{
+  display: inline-block;
+  text-align: left;
+}
+h1{
+  color: darkred;
+  text-align: center;
+}
+h3{
+  text-align:center;
+}
+.images{
+  width: 750px;
+  border: black 1px solid;
+}
+
+.header-container{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Part 1: Navbar */
+
+/* General style rule set for all items in ul */
+.navbar ul {
+    list-style: none;
+    overflow:hidden;
+    position:fixed;
+    top:0;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Style rule set for individual li */
+.navbar ul li {
+    float: left;
+    margin: 10px;
+}
+
+
+/* Style rule set for individual li link */
+.navbar ul li a {
+    font-family: Arial;
+    color:black;
+    font-size: 16px;
+    text-decoration: none;
+
+    display: black;
+    text-decoration:none;
+    color: red;
+    text-align: center;
+}
+
+/* Style rule set for hovered link */
+.navbar ul li a:hover {
+    font-weight: bold;
+    color: #85efa4;
+}
+
+
+
+
+/* Part 2: Flexbox */
+
+/* General style rule set for flex container */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+
+/* Style rules for flex-item 1 */
+.flex-item:nth-of-type(1) {
+
+}
+
+/* Style rules for flex-item 2 */
+.flex-item:nth-of-type(2) {
+
+}
+
+/* Style rules for flex-item 3 */
+.flex-item:nth-of-type(3) {
+
+}
+
+
+/* Style set for all flex-items */
+.flex-item {
+    background: white;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Customize Dark Mode Theme */
+.dark-mode {
+  background-color: black;
+
+}
+
+/* Add style to button */
+#theme-button {
+  text-decoration: underline;
+  color: red;
+  border: 3px dotted red;
+}
+
+/* Links */
+a:link{
+  color:black;
+}
+
+a:visited{
+  color:red;
+}
+
+a:hover{
+  color:white;
+}
+
+a:active{
+  color: green;
+}
+
+/*bottom footer*/
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  color: black;
+}
