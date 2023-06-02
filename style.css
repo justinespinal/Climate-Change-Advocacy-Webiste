@@ -3,11 +3,11 @@ html {
   width: 100%;
 }
 
-
 body{
-  background-color: #063084;
+  background-color: slategray;
   text-align:center;
-  color:white;
+  color:black;
+  font: bold;
 }
 
 .text-split{
@@ -22,7 +22,6 @@ body{
   
 }
 #text{
-  background-color: #4a7ee5;
   font-style: italic;
   text-align: center;
 }
@@ -42,8 +41,11 @@ h3{
   text-align:center;
 }
 .images{
-  width: 750px;
-  border: black 1px solid;
+  width: 500px;
+}
+
+.row-img{
+  width: 250px;
 }
 
 .header-container{
@@ -53,11 +55,14 @@ h3{
   justify-content: center;
 }
 
+
+
 /* Part 1: Navbar */
 
 /* General style rule set for all items in ul */
 .navbar ul {
     list-style: none;
+    z-index: 5;
     overflow:hidden;
     position:fixed;
     top:0;
@@ -75,12 +80,10 @@ h3{
 /* Style rule set for individual li link */
 .navbar ul li a {
     font-family: Arial;
-    color:black;
     font-size: 16px;
     text-decoration: none;
 
-    display: black;
-    text-decoration:none;
+    display: block;
     color: red;
     text-align: center;
 }
@@ -128,10 +131,26 @@ h3{
     text-align: center;
 }
 
+.info{
+  background-color: white;
+  border: solid;
+  border-color: black;
+  border-width: 1px;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px;
+  padding-top: 150px;
+  height: 300px;
+  position: fixedbox;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+}
+
 /* Customize Dark Mode Theme */
 .dark-mode {
   background-color: black;
-
+  color: white;
 }
 
 /* Add style to button */
@@ -143,15 +162,15 @@ h3{
 
 /* Links */
 a:link{
-  color:black;
+  color:mediumslateblue;
 }
 
 a:visited{
-  color:red;
+  color: purple;
 }
 
 a:hover{
-  color:white;
+  color: cyan;
 }
 
 a:active{
@@ -161,10 +180,177 @@ a:active{
 /*bottom footer*/
 .footer {
   position: fixed;
+  z-index: 3;
   left: 0;
   bottom: 0;
   width: 100%;
   height: auto;
+  margin : 0;
   background-color: white;
   color: black;
+}
+
+
+/*Petition signing*/
+
+.justin{
+  margin-top: -500px; 
+  border: solid; 
+  border-color:black; 
+  border-width: 2px; 
+  border-radius: 100%;
+  width: 100px; 
+  height: 100px;
+}
+
+.justin-dark{
+  border-color:white;
+}
+
+.petition-master{
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:10px;
+}
+
+.petition-container{
+  display : flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width:100%;
+  padding-bottom:50px;
+}
+.petition{
+  width : 50%;
+  
+}
+.petition-para{
+  width : 50%;
+  padding-right : 10px;
+  
+}
+
+.signatures{
+  width : 45%;
+  padding-right : 10px;
+}
+
+
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background:pink;
+}
+
+
+/* Top animation */
+
+section{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section img{
+  position: absolute;
+  height:100%;
+  width:100%;
+  object-fit: cover;
+  
+}
+
+#textTop{
+  position: relative;
+  color: black;
+  font-size: 150px;
+  z-index: 1;
+  margin-top: 60px;
+}
+
+#foliage{
+  z-index: 2;
+}
+
+/* the modal that covers the background and prevents user interactions */
+.modal {
+  display: none; /* hides the modal from view by default*/
+  position: fixed; /* keeps the modal in one place */
+  z-index: 5; /* positions the modal on top of all other elements on the screen */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.4); /* 40% opacity black - other elements can still be seen */
+  flex-direction: column; /* these flexbox rules center the content on the screen */
+  align-items: center;
+  justify-content: center;
+}
+
+/* box that contains all the content and images */
+.modal-content {
+  background-color: lightsteelblue;
+  color: black;
+  text-align: center;
+  font-size: 2rem;
+  display: flex; /* adds flexbox to center all items */
+  justify-content: center;
+  align-items: center;
+}
+
+#thanks-modal-content {
+  width: 20rem; /* sets a default width for the text container */
+}
+
+#modal-text-container {
+  display: flex; /* adds flexbox to center the text and buttons*/
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Revealable animation */
+.revealable{
+  position: relative;
+  transform: translateY(150px);
+  opacity : 0;
+  transition-duration: 2s;
+  transition-property: all;
+  transition-timing-function: ease;
+}
+
+.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.theme-button1{
+  border:none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent;
+}
+  
+#github{
+  width:25px;
+}
+
+#linkedin{
+  width:25px;
+}
+
+#resume{
+  width: 25px;
+}
+  
+#linkedin-button:hover, #github-button:hover, #resume-button:hover {
+  color: #c7c7c7;
+  
 }
